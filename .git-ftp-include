@@ -1,0 +1,6 @@
+assets/js/customizer.min.js:src/js/customizer.js
+assets/js/navigation.min.js:src/js/navigation.js
+assets/js/skip-link-focus-fix.min.js:src/js/skip-link-focus-fix.js
+
+assets/css/style.min.css:src/sass/.
+assets/css/style.min.css.map:src/sass/.
