@@ -15,16 +15,20 @@
 
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
+			&copy; <?php echo esc_attr( date( 'Y' ) ); ?>
+			<span class="sep"> | </span>
+			<?php the_privacy_policy_link(); ?>
+			<span class="sep"> | </span>
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'ghc' ) ); ?>">
 				<?php
 				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'ghc' ), 'WordPress' );
+				printf( esc_html__( 'Powered by %s', 'ghc' ), 'WordPress' );
 				?>
 			</a>
 			<span class="sep"> | </span>
 				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'ghc' ), 'ghc', '<a href="http://www.jcrod.com/">JCRod</a> and <a href="https://andrewrminion.com/">AndrewRMinion Design</a>' );
+				/* translators: 1: Theme author. */
+				printf( esc_html__( 'Theme by %1$s.', 'ghc' ), '<a href="http://www.jcrod.com/">JCRod</a> and <a href="https://andrewrminion.com/">AndrewRMinion Design</a>' );
 				?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
