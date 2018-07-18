@@ -1,0 +1,65 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "85349873a6fe4be91c0b4dc8a19ef711",
+    "packages": [
+        {
+            "name": "samrap/acf-fluent",
+            "version": "v0.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/samrap/acf-fluent.git",
+                "reference": "55af7560a8c395088fa8e0cd424641bd20cdb8e0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/samrap/acf-fluent/zipball/55af7560a8c395088fa8e0cd424641bd20cdb8e0",
+                "reference": "55af7560a8c395088fa8e0cd424641bd20cdb8e0",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Samrap\\Acf\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sam Rapaport",
+                    "email": "me@samrapdev.com"
+                }
+            ],
+            "description": "A fluent interface for the Advanced Custom Fields WordPress plugin",
+            "keywords": [
+                "acf",
+                "fluent",
+                "helper",
+                "interface",
+                "wordpress",
+                "wrapper"
+            ],
+            "time": "2018-02-01T21:44:09+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

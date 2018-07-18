@@ -1,0 +1,5 @@
+{
+    "require": {
+        "samrap/acf-fluent": "^0.4.0"
+    }
+}

@@ -7,6 +7,8 @@
  * @package GHC
  */
 
+require_once 'vendor/autoload.php';
+
 /**
  * Set theme version constant.
  */
