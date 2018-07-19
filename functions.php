@@ -136,6 +136,12 @@ function ghc_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
+	?>
+	<script type="text/javascript">
+		WebFontConfig={google:{families:["Montserrat:300,300i,500,500i,600,600i","Sanchez:400,400i"]}},function(e){var t=e.createElement("script"),o=e.scripts[0];t.src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js",t.async=!0,o.parentNode.insertBefore(t,o)}(document);
+	</script>
+	<?php
 }
 add_action( 'wp_enqueue_scripts', 'ghc_scripts' );
 
