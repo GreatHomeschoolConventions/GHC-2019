@@ -5,8 +5,7 @@
 
 	.site-branding,
 	.header {
-		background: rgba(black, 0.75);
-		color: white;
+		@include overlay();
 	}
 
 	.site-branding {
