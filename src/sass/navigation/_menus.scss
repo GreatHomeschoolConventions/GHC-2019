@@ -1,8 +1,8 @@
 .main-navigation {
-	clear: both;
 	display: block;
-	float: left;
 	width: 100%;
+
+	&#top-navigation { width: auto; }
 
 	ul {
 		display: none;
@@ -67,6 +67,34 @@
 	.current-menu-item > a,
 	.current_page_ancestor > a,
 	.current-menu-ancestor > a {
+	}
+}
+
+#top-navigation {
+	a {
+		color: $theme-green;
+
+		&[href*="register"] {
+			@extend .button;
+			@extend .hollow;
+			color: $theme-green;
+			border-color: $theme-green;
+
+			&:hover,
+			&:focus,
+			&:active {
+				border-color: $theme-green;
+				background-color: $theme-green;
+				color: white;
+			}
+		}
+	}
+
+	.dashicons {
+		font-size: 2em;
+		width: 1em;
+		height: 1em;
+		margin: 0.15em 0.25em;
 	}
 }
 

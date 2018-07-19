@@ -49,9 +49,10 @@ if ( ! function_exists( 'ghc_setup' ) ) :
 		 */
 		add_theme_support( 'post-thumbnails' );
 
-		// This theme uses wp_nav_menu() in one location.
+		// This theme uses wp_nav_menu() in these locations.
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'ghc' ),
+			'primary-menu' => esc_html__( 'Primary', 'ghc' ),
+			'top-menu'     => esc_html__( 'Top', 'ghc' ),
 		) );
 
 		/*
@@ -128,6 +129,7 @@ add_action( 'widgets_init', 'ghc_widgets_init' );
  */
 function ghc_scripts() {
 	wp_enqueue_style( 'ghc-style', get_template_directory_uri() . '/assets/css/style.min.css', array(), AQD_THEME_VERSION );
+	wp_enqueue_style( 'dashicons' );
 
 	wp_enqueue_script( 'ghc-navigation', get_template_directory_uri() . '/assets/js/navigation.min.js', array(), AQD_THEME_VERSION, true );
 

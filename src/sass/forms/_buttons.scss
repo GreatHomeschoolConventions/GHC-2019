@@ -17,22 +17,22 @@ input[type="submit"] {
 	&:focus {
 		background-color: $color__background-button-focus;
 	}
+}
 
-	&.hollow {
-		background: transparent;
-		border: 2px solid $color__background-button;
+.hollow {
+	background: transparent;
+	border: 2px solid $color__background-button;
 
-		&:hover {
-			border-color: $color__background-button-hover;
-			background-color: $color__background-button-hover;
-		}
-
-		&:active,
-		&:focus {
-			border-color: $color__background-button-focus;
-			background-color: $color__background-button-focus;
-		}
-
-
+	&:hover {
+		border-color: $color__background-button-hover;
+		background-color: $color__background-button-hover;
 	}
+
+	&:active,
+	&:focus {
+		border-color: $color__background-button-focus;
+		background-color: $color__background-button-focus;
+	}
+
+
 }

@@ -1,0 +1,68 @@
+.site-header {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+
+	.site-branding,
+	.header {
+		background: rgba(black, 0.75);
+		color: white;
+	}
+
+	.site-branding {
+		text-align: center;
+
+		.container {
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+			justify-content: center;
+
+			@media screen and (min-width: 37.5em) {
+				justify-content: flex-start;
+				text-align: left;
+
+				.site-title { flex-grow: 2; }
+			}
+		}
+
+		a { color: white; }
+
+		.custom-logo {
+			width: 130px;
+			margin-right: 1em;
+		}
+	}
+
+	.header {
+		text-align: center;
+		padding-top: 2em;
+		padding-bottom: 2em;
+
+		@media screen and (min-width: 37.5em) {
+			padding-top: 6em;
+			padding-bottom: 6em;
+		}
+
+		.title,
+		.subtitle {
+			margin: 0;
+		}
+
+		.subtitle {
+			font-family: $font__main;
+			font-weight: 300;
+
+			&:before,
+			&:after {
+				content: '—';
+				display: inline-block;
+				padding: 0 0.25em;
+			}
+		}
+	}
+}
+
+.site-title {
+	font-size: 1.5em;
+}
