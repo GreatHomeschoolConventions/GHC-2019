@@ -20,3 +20,61 @@
 	clear: both;
 	margin: 0 0 1.5em;
 }
+
+.home {
+	.tagline-stripe {
+		margin: 0;
+		list-style-type: none;
+
+		.container {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
+		}
+
+		@media screen and (min-width: 37.5em) {
+			li { width: 33%; }
+		}
+
+		li {
+			position: relative;
+			padding: 2em 1em;
+
+			&:hover {
+				.dashicons {
+					font-size: 2em;
+					margin-top: -0.5em;
+				}
+
+				.description {
+					opacity: 1;
+					margin-bottom: auto;
+				}
+			}
+		}
+
+		span {
+			display: block;
+			margin-right: auto;
+			margin-left: auto;
+			text-align: center;
+			max-width: 300px;
+		}
+
+		.dashicons {
+			font-size: 4em;
+			width: 1em;
+			height: 1em;
+			@extend %transition;
+		}
+
+		.description {
+			margin-top: 1em;
+			margin-bottom: 2em;
+			left: calc(50% - 150px);
+			position: absolute;
+			opacity: 0;
+			transition: opacity 0.3s ease;
+		}
+	}
+}
