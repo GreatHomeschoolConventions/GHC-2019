@@ -5,3 +5,29 @@
 	margin-left: auto;
 	padding: 1em;
 }
+
+.theme {
+	&.bg {
+		* { color: white; }
+
+		&.blue { background-color: $theme-blue; }
+		&.yellow { background-color: $theme-yellow; * { color: $theme-blue; } }
+		&.green { background-color: $theme-green; }
+		&.orange { background-color: $theme-orange; }
+		&.magenta { background-color: $theme-magenta; }
+		&.teal { background-color: $theme-teal; }
+		&.pink { background-color: $theme-pink; }
+		&.gray { background-color: $theme-gray; }
+	}
+
+	&.text {
+		&.blue * { color: $theme-blue; }
+		&.yellow * { color: $theme-yellow; }
+		&.green * { color: $theme-green; }
+		&.orange * { color: $theme-orange; }
+		&.magenta * { color: $theme-magenta; }
+		&.teal * { color: $theme-teal; }
+		&.pink * { color: $theme-pink; }
+		&.gray * { color: $theme-gray; }
+	}
+}
