@@ -8,6 +8,7 @@
  */
 
 require_once 'vendor/autoload.php';
+use Samrap\Acf\Acf;
 
 /**
  * Set theme version constant.
@@ -183,7 +184,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
  * @return string          Modified author HTML.
  */
 function ghc_testimonial_custom_author_html( $content, $author ) {
-	$content = '<p class="author modified">&mdash; ' . esc_attr( $author ) . ' &mdash;</p>';
+	$content = '<p class="author">&mdash; ' . esc_attr( $author ) . ' &mdash;</p>';
 	return $content;
 }
 add_filter( 'simple_testimonials_author_html', 'ghc_testimonial_custom_author_html', 10, 2 );
@@ -195,6 +196,12 @@ add_filter( 'simple_testimonials_author_html', 'ghc_testimonial_custom_author_ht
  */
 function ghc_testimonial_before_posts() {
 	echo '<div class="container">';
+
+	$testimonial_bg = ACF::option( 'testimonial_background' )->expect( 'string' )->default( '' )->escape( 'esc_url' )->get();
+
+	if ( ! empty( $testimonial_bg ) ) {
+		echo '<style type="text/css">.testimonials.shortcode {background-image: url(' . $testimonial_bg . ')}</style>'; // WPCS: XSS ok because it’s escaped above.
+	}
 }
 add_action( 'simple_testimonials_before_posts', 'ghc_testimonial_before_posts' );
 /**

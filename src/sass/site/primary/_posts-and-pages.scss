@@ -37,6 +37,41 @@
 	}
 }
 
+.testimonials.shortcode {
+	background-position: center;
+	background-size: cover;
+
+	.container { padding: 0; }
+
+	.testimonial {
+		padding: 4em 2em;
+		color: white;
+		text-align: center;
+		@include overlay($theme-orange);
+
+		> * {
+			display: block;
+			margin-right: auto;
+			margin-left: auto;
+			max-width: 800px;
+		}
+
+		h3 { display: none; }
+
+		p:not(.author) {
+			font-size: 1.625em;
+			font-family: $font__headings;
+		}
+
+		.author {
+			font-weight: 300;
+			font-style: italic;
+		}
+
+		.home & { @include overlay($theme-teal); }
+	}
+}
+
 .home {
 	.tagline-stripe {
 		margin: 0;
