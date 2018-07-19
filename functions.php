@@ -188,3 +188,21 @@ function ghc_testimonial_custom_author_html( $content, $author ) {
 }
 add_filter( 'simple_testimonials_author_html', 'ghc_testimonial_custom_author_html', 10, 2 );
 
+/**
+ * Add container wrapper to testimonial shortcode.
+ *
+ * @return void Prints HTML content.
+ */
+function ghc_testimonial_before_posts() {
+	echo '<div class="container">';
+}
+add_action( 'simple_testimonials_before_posts', 'ghc_testimonial_before_posts' );
+/**
+ * Add container wrapper to testimonial shortcode.
+ *
+ * @return void Prints HTML content.
+ */
+function ghc_testimonial_after_posts() {
+	echo '</div>';
+}
+add_action( 'simple_testimonials_after_posts', 'ghc_testimonial_after_posts' );
