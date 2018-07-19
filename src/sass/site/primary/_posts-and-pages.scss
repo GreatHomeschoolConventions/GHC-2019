@@ -22,7 +22,18 @@
 }
 
 .carousel {
+	&.shortcode {
+		margin-right: 2em;
+		margin-left: 2em;
+
+		@media screen and (min-width: 37.5em) {
+			margin-right: 3em;
+			margin-left: 3em;
+		}
+	}
+
 	.ghc-carousel.item {
+		padding: 1em;
 		text-align: center;
 
 		img {
@@ -34,6 +45,32 @@
 				height: auto;;
 			}
 		}
+	}
+
+	.slick-arrow.dashicons {
+		font-size: 2em;
+		width: 1em;
+		height: 1em;
+
+		@media screen and (min-width: 37.5em) {
+			font-size: 4em;
+		}
+
+		&:before { color: $theme-blue; }
+
+		&.prev,
+		&.next {
+			position: absolute;
+			display: block;
+			cursor: pointer;
+			top: 50%;
+			transform: translateY(-50%);
+			padding: 0;
+			border: none;
+		}
+
+		&.prev { left:  -1em; }
+		&.next { right: -1em; }
 	}
 }
 
