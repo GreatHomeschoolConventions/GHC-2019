@@ -13,6 +13,8 @@ $color__background-hr: $theme-gray;
 $color__background-button: $theme-magenta;
 $color__background-pre: lighten($theme-gray, 50%);
 $color__background-ins: $theme-gray;
+$color__background-button-hover: $theme-orange;
+$color__background-button-focus: $theme-orange;
 
 $color__text-screen: $theme-teal;
 $color__text-input: $theme-blue;
@@ -22,8 +24,5 @@ $color__link-visited: $theme-orange;
 $color__link-hover: $theme-blue;
 $color__text-main: $theme-gray;
 
-$color__border-button: $theme-magenta;
-$color__border-button-hover: $theme-orange;
-$color__border-button-focus: $theme-orange;
 $color__border-input: $theme-blue;
 $color__border-abbr: $theme-gray;
