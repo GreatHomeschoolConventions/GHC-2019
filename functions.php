@@ -195,7 +195,8 @@ add_filter( 'simple_testimonials_author_html', 'ghc_testimonial_custom_author_ht
  * @return void Prints HTML content.
  */
 function ghc_testimonial_before_posts() {
-	echo '<div class="container">';
+	echo '<div class="overlay">
+	<div class="container">';
 
 	$testimonial_bg = ACF::option( 'testimonial_background' )->expect( 'string' )->default( '' )->escape( 'esc_url' )->get();
 
@@ -210,6 +211,7 @@ add_action( 'simple_testimonials_before_posts', 'ghc_testimonial_before_posts' )
  * @return void Prints HTML content.
  */
 function ghc_testimonial_after_posts() {
-	echo '</div>';
+	echo '</div>
+	</div>';
 }
 add_action( 'simple_testimonials_after_posts', 'ghc_testimonial_after_posts' );

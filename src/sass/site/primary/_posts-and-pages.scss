@@ -78,13 +78,18 @@
 	background-position: center;
 	background-size: cover;
 
+	.overlay {
+		@include overlay($theme-orange);
+
+		.home & { @include overlay($theme-teal); }
+	}
+
 	.container { padding: 0; }
 
 	.testimonial {
 		padding: 4em 2em;
 		color: white;
 		text-align: center;
-		@include overlay($theme-orange);
 
 		> * {
 			display: block;
@@ -104,8 +109,6 @@
 			font-weight: 300;
 			font-style: italic;
 		}
-
-		.home & { @include overlay($theme-teal); }
 	}
 }
 
