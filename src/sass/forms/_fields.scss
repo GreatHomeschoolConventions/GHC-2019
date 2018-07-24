@@ -18,6 +18,7 @@ textarea {
 	border: 1px solid $color__border-input;
 	border-radius: 3px;
 	padding: 3px;
+	max-width: 100%;
 
 	&:focus {
 		color: $color__text-input-focus;
