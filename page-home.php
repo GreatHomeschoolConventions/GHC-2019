@@ -43,10 +43,17 @@ get_header();
 
 			get_template_part( 'template-parts/content', 'page' );
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
+			// Homepage bottom CTA.
+			$home_cta = ACF::field( 'bottom_cta' )->get();
+			if ( count( $home_cta ) > 0 ) {
+				?>
+				<div class="home-cta" style="background-image: url(<?php echo esc_url( $home_cta['cta_background_image'] ); ?>)">
+					<div class="container">
+						<?php echo wp_kses_post( $home_cta['cta_text'] ); ?>
+					</div>
+				</div>
+				<?php
+			}
 
 		endwhile; // End of the loop.
 		?>

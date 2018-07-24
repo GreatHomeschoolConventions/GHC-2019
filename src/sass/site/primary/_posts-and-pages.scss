@@ -219,3 +219,22 @@
 		}
 	}
 }
+
+.home-cta {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	min-height: 400px;
+	color: white;
+	background-position: center;
+	background-size: cover;
+
+	.button {
+		background-color: $theme-yellow;
+
+		&:hover, &:focus, &:active {
+			background-color: $theme-magenta;
+			color: white;
+		}
+	}
+}
