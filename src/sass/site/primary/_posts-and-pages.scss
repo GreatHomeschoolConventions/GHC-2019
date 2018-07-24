@@ -74,6 +74,38 @@
 	}
 }
 
+.ghc-map {
+	min-height: 400px;
+}
+
+.ghc-map-container {
+	.container {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	@media screen and (min-width: 37.5em) {
+		.ghc-map, .map-locations-info { width: 50%; }
+	}
+
+	.map-info {
+		background-repeat: no-repeat;
+		background-position: 0.5em 0em;
+		background-size: 3em;
+		padding-left: 4em;
+
+		h1 {
+			margin-bottom: 0;
+
+			+ .meta { margin-top: 0; }
+		}
+
+		.wpcf7 {
+			p { margin-bottom: 0; }
+		}
+	}
+}
+
 .testimonials.shortcode {
 	background-position: center;
 	background-size: cover;
