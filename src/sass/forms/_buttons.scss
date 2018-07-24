@@ -10,6 +10,7 @@ input[type="submit"] {
 	line-height: 1;
 	padding: .75em 1em;
 	@extend %transition;
+	font-family: $font__headings;
 
 	&:hover { background-color: $color__background-button-hover; }
 
