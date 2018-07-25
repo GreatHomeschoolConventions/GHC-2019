@@ -75,7 +75,7 @@
 }
 
 .ghc-map {
-	min-height: 300px;
+	min-height: 400px;
 }
 
 .ghc-map-container {
@@ -85,10 +85,20 @@
 		padding: 0;
 	}
 
-	.ghc-map, .map-locations-info {
+	.ghc-map,
+	.map-locations-info {
 		width: 100%;
+	}
 
-		@media screen and (min-width: 37.5em) { width: 50%; }
+	&.display-side {
+		.ghc-map,
+		.map-locations-info {
+			@media screen and (min-width: 37.5em) { width: 50%; }
+		}
+	}
+
+	&.display-infoWindow {
+		.map-locations-info { display: none; }
 	}
 
 	.map-info {
