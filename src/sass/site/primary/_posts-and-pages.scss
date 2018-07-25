@@ -135,7 +135,7 @@
 	.container { padding: 0; }
 
 	.testimonial {
-		padding: 4em 2em;
+		padding: 6em 2em;
 		color: white;
 		text-align: center;
 
@@ -218,6 +218,8 @@
 			transition: opacity 0.3s ease;
 		}
 	}
+
+	.type-page.hentry { margin-bottom: 0; }
 }
 
 .home-cta {
