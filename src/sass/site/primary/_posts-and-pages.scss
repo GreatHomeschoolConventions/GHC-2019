@@ -21,6 +21,8 @@
 	margin: 0 0 1.5em;
 }
 
+.overlay { @include overlay(); }
+
 .carousel {
 	&.shortcode {
 		margin-right: 2em;
