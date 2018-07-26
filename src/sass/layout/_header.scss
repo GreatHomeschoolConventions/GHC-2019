@@ -17,7 +17,7 @@
 			flex-wrap: wrap;
 			justify-content: center;
 
-			@media screen and (min-width: 37.5em) {
+			@include large {
 				justify-content: flex-start;
 				text-align: left;
 
@@ -38,7 +38,7 @@
 		padding-top: 2em;
 		padding-bottom: 2em;
 
-		@media screen and (min-width: 37.5em) {
+		@include large {
 			padding-top: 9em;
 			padding-bottom: 9em;
 		}
