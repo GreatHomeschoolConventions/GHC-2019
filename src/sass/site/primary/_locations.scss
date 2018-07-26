@@ -1,0 +1,126 @@
+.location {
+	.address-stripe {
+		background-position: center;
+		background-size: cover;
+		text-align: center;
+
+		.container {
+			@include overlay($theme-teal);
+		}
+
+		.dashicons {
+			font-size: 6rem;
+			width: 1em;
+			height: 1em;
+		}
+
+		h2 { margin: 0; }
+	}
+
+	.features {
+
+		.container {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+
+		.feature {
+			width: 150px;
+			height: 150px;
+			border-radius: 50%;
+			text-align: center;
+
+			@include large {
+				width: 300px;
+				height: 300px;
+			}
+
+			&, a { @extend %transition; }
+
+			&:hover { transform: scale(1.1); }
+
+			h3 { font-size: 1.5rem; }
+
+			a {
+				height: 100%;
+				width: 100%;
+				color: white;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				border-radius: 50%;
+				@include overlay($theme-magenta);
+				text-shadow: 0 0 3px rgba(black, 0.5);
+
+				&:hover,
+				&:focus,
+				&:active {
+					background-color: transparent;
+				}
+			}
+		}
+	}
+
+	.pricing-stripe {
+		.container {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+
+		.price-point {
+			width: 100%;
+
+			@include large { width: 33%; }
+		}
+
+		.header {
+			font-family: $font__main;
+			font-size: 3rem;
+			margin-bottom: 0;
+			text-align: center;
+
+			@include large { font-size: 5rem; }
+
+			.meta {
+				font-size: 1rem;
+				font-weight: 300;
+			}
+		}
+
+		.content {
+			p:first-child { margin-top: 0; }
+
+			ul {
+				display: inline-block;
+				padding: 0;
+				list-style-type: none;
+				margin-left: 0;
+				margin-bottom: 2rem;
+
+				@include large { margin-bottom: 3.333rem; }
+			}
+
+			li {
+				&:before {
+					display: inline-block;
+					content: "\f147";
+					font-family: 'dashicons';
+					color: #91dc5a;
+					font-size: 2em;
+					line-height: 1;
+					position: relative;
+					top: 0.3em;
+				}
+			}
+		}
+	}
+}
+
+#register {
+	> h2 {
+		text-align: center;
+		color: $theme-orange;
+	}
+}
