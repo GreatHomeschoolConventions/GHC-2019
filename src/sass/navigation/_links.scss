@@ -17,4 +17,13 @@ a {
 	&:active {
 		outline: 0;
 	}
+
+	.overlay & {
+		color: white;
+		text-decoration: underline;
+
+		&:hover,
+		&:focus,
+		&:active { color: $color__link-hover; }
+	}
 }
