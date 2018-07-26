@@ -23,6 +23,10 @@
 
 .overlay { @include overlay(); }
 
+.site-content .container {
+	@include vertical-padding();
+}
+
 .carousel {
 	&.shortcode {
 		margin-right: 2em;
@@ -150,10 +154,7 @@
 		.home & { @include overlay($theme-teal); }
 	}
 
-	.container { padding: 0; }
-
 	.testimonial {
-		@include vertical-padding();
 		color: white;
 		text-align: center;
 
