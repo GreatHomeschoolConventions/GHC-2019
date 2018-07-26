@@ -76,7 +76,7 @@
 	}
 
 	&[data-slick*="centerMode"] {
-		.slick-slide { transition: all 0.3s ease; }
+		.slick-slide { @extend %transition; }
 
 		.slick-current { transform: scale(1.1); }
 	}
