@@ -145,7 +145,7 @@
 	.container { padding: 0; }
 
 	.testimonial {
-		padding: 6em 2em;
+		@include vertical-padding();
 		color: white;
 		text-align: center;
 

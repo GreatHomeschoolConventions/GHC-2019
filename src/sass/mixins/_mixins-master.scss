@@ -33,6 +33,16 @@
 	color: white;
 }
 
+// Vertical padding
+@mixin vertical-padding($vertical: 6em, $horizontal: 2em) {
+	padding: $vertical $horizontal;
+
+	@media screen and (max-width: 37.5em) {
+		padding-top: ($vertical / 2);
+		padding-bottom: ($vertical / 2);
+	}
+}
+
 %transition {
 	transition: all 0.3s ease;
 }
