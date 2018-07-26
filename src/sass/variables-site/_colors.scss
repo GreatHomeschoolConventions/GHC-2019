@@ -17,13 +17,16 @@ $color__background-ins: $theme-gray;
 $color__background-button-hover: $theme-orange;
 $color__background-button-focus: $theme-orange;
 
+$color__text-main: $theme-gray;
 $color__text-screen: $theme-teal;
 $color__text-input: $theme-blue;
 $color__text-input-focus: $theme-blue;
+
 $color__link: $theme-blue;
 $color__link-visited: $theme-blue;
 $color__link-hover: $theme-orange;
-$color__text-main: $theme-gray;
+$color__link-button-hover: white;
+$color__link-button-focus: $color__link-button-hover;
 
 $color__border-input: $theme-blue;
 $color__border-abbr: $theme-gray;

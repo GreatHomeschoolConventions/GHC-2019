@@ -12,11 +12,15 @@ input[type="submit"] {
 	@extend %transition;
 	font-family: $font__headings;
 
-	&:hover { background-color: $color__background-button-hover; }
+	&:hover {
+		background-color: $color__background-button-hover;
+		color: $color__link-button-hover;
+	}
 
 	&:active,
 	&:focus {
 		background-color: $color__background-button-focus;
+		color: $color__link-button-focus;
 	}
 }
 
