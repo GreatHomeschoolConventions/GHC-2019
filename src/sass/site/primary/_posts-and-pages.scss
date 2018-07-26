@@ -72,6 +72,12 @@
 		&.prev { left:  -1em; }
 		&.next { right: -1em; }
 	}
+
+	&[data-slick*="centerMode"] {
+		.slick-slide { transition: all 0.3s ease; }
+
+		.slick-current { transform: scale(1.1); }
+	}
 }
 
 .ghc-map {
