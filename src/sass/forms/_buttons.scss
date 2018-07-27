@@ -11,6 +11,8 @@ input[type="submit"] {
 	padding: .75em 1em;
 	@extend %transition;
 	font-family: $font__headings;
+	display: inline-block;
+	margin-bottom: 0.5em;
 
 	&:hover {
 		background-color: $color__background-button-hover;
@@ -28,15 +30,16 @@ input[type="submit"] {
 		border: 2px solid $color__background-button;
 		color: $color__background-button;
 
-		&:hover, &:focus, &:active { color: white; }
+		&:hover, &:focus, &:active, &.active { color: white; }
 
 		&:hover {
 			border-color: $color__background-button-hover;
 			background-color: $color__background-button-hover;
 		}
 
+		&:focus,
 		&:active,
-		&:focus {
+		&.active {
 			border-color: $color__background-button-focus;
 			background-color: $color__background-button-focus;
 		}
