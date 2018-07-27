@@ -22,22 +22,27 @@ input[type="submit"] {
 		background-color: $color__background-button-focus;
 		color: $color__link-button-focus;
 	}
+
+	&.hollow {
+		background: transparent;
+		border: 2px solid $color__background-button;
+		color: $color__background-button;
+
+		&:hover, &:focus, &:active { color: white; }
+
+		&:hover {
+			border-color: $color__background-button-hover;
+			background-color: $color__background-button-hover;
+		}
+
+		&:active,
+		&:focus {
+			border-color: $color__background-button-focus;
+			background-color: $color__background-button-focus;
+		}
+
+
+	}
 }
 
-.hollow {
-	background: transparent;
-	border: 2px solid $color__background-button;
-
-	&:hover {
-		border-color: $color__background-button-hover;
-		background-color: $color__background-button-hover;
-	}
-
-	&:active,
-	&:focus {
-		border-color: $color__background-button-focus;
-		background-color: $color__background-button-focus;
-	}
-
-
-}
+a.button { text-decoration: none; }
