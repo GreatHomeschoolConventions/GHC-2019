@@ -80,9 +80,13 @@
 	}
 
 	&[data-slick*="centerMode"] {
-		.slick-slide { @extend %transition; }
+		.slick-slide {
+			@extend %transition;
 
-		.slick-current { transform: scale(1.1); }
+			&:not(.slick-current) { transform: scale(0.9); }
+		}
+
+		.slick-current { transform: scale(1.0); }
 	}
 }
 
