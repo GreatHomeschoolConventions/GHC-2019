@@ -23,7 +23,7 @@
 
 .overlay { @include overlay(); }
 
-.site-content .container {
+.site-content .container:not(.shortcode.wrapper) {
 	@include vertical-padding();
 }
 
