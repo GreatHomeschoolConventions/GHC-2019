@@ -1,0 +1,173 @@
+.overlay {
+	@include overlay();
+
+	.speaker-tags & { @include overlay($theme-blue); }
+}
+
+.site-content .container:not(.shortcode.wrapper) {
+	@include vertical-padding();
+}
+
+.carousel {
+	&.shortcode {
+		margin-right: 2em;
+		margin-left: 2em;
+
+		@include large {
+			margin-right: 3em;
+			margin-left: 3em;
+		}
+	}
+
+	.ghc-carousel.item {
+		padding: 1em;
+		text-align: center;
+
+		img {
+			display: block;
+			margin: 0 auto;
+
+			&[src*="svg"] {
+				width: 100%;
+				height: auto;
+			}
+		}
+	}
+
+	.slick-arrow.dashicons {
+		font-size: 2em;
+		width: 1em;
+		height: 1em;
+
+		@include large {
+			font-size: 4em;
+		}
+
+		&:before { color: $theme-blue; }
+
+		&.prev,
+		&.next {
+			position: absolute;
+			display: block;
+			cursor: pointer;
+			top: 50%;
+			transform: translateY(-50%);
+			padding: 0;
+			border: none;
+		}
+
+		&.prev { left:  -1em; }
+		&.next { right: -1em; }
+	}
+
+	&[data-slick*="centerMode"] {
+		.slick-slide {
+			@extend %transition;
+
+			&:not(.slick-current) { transform: scale(0.9); }
+		}
+
+		.slick-current { transform: scale(1.0); }
+	}
+}
+
+.ghc-map {
+	min-height: 400px;
+}
+
+.ghc-map-container {
+	.container {
+		display: flex;
+		flex-wrap: wrap;
+		padding: 0;
+	}
+
+	.ghc-map,
+	.map-locations-info {
+		width: 100%;
+	}
+
+	&.display-side {
+		.ghc-map,
+		.map-locations-info {
+			@include large { width: 50%; }
+		}
+	}
+
+	&.display-infoWindow {
+		.map-locations-info { display: none; }
+	}
+
+	.map-info {
+		background-repeat: no-repeat;
+		background-position: center 1em;
+		background-size: 3em;
+		padding: 4em 1em 1em;
+
+		@include large {
+			background-position: 0.5em 1em;
+			padding: 1em 1em 1em 4em;
+		}
+
+		@include small {
+			h1, .meta, address { text-align: center; }
+		}
+
+		h1 {
+			margin: 0;
+
+			+ .meta { margin-top: 0; }
+		}
+
+		.wpcf7 {
+			p { margin-bottom: 0; }
+
+			input[type="submit"] { margin-top: 1em; }
+		}
+	}
+
+	.home & + .container { background-color: $theme-silver; }
+}
+
+.testimonials.shortcode {
+	background-position: center;
+	background-size: cover;
+
+	.overlay {
+		@include overlay($theme-orange);
+
+		.home & { @include overlay($theme-teal); }
+	}
+
+	.testimonial {
+		color: white;
+		text-align: center;
+
+		&:only-of-type { margin-bottom: 0; }
+
+		> * {
+			display: block;
+			margin-right: auto;
+			margin-left: auto;
+			max-width: 800px;
+		}
+
+		h3 { display: none; }
+
+		p:not(.author) {
+			font-size: 1.625em;
+			font-family: $font__headings;
+		}
+
+		.author {
+			font-weight: 300;
+			font-style: italic;
+		}
+	}
+}
+
+.speaker-tags.shortcode {
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
