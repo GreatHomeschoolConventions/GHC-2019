@@ -132,6 +132,25 @@
 	.home & + .container { background-color: $theme-silver; }
 }
 
+.register.shortcode {
+	text-align: center;
+
+	input[type="radio"].filter { display: none; }
+
+	input.filter#southeast:checked ~ .woocommerce .product:not(.product_cat-southeast)     { display: none; }
+	input.filter#texas:checked ~ .woocommerce .product:not(.product_cat-texas)         { display: none; }
+	input.filter#midwest:checked ~ .woocommerce .product:not(.product_cat-midwest)       { display: none; }
+	input.filter#california:checked ~ woocommerce .product:not(.product_cat-california)    { display: none; }
+	input.filter#missouri:checked ~ .woocommerce .product:not(.product_cat-missouri)      { display: none; }
+	input.filter#new-york:checked ~ .woocommerce .product:not(.product_cat-new-york)    { display: none; }
+	input.filter#florida:checked ~ .woocommerce .product:not(.product_cat-florida)      { display: none; }
+
+	input.filter:checked + label.button {
+		@extend .button.hollow.active;
+	}
+
+}
+
 .speaker-tags.shortcode {
 	background-repeat: no-repeat;
 	background-position: center;
