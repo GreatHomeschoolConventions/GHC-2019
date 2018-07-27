@@ -52,6 +52,14 @@ use Samrap\Acf\Acf;
 				$button_url  = ACF::field( 'button_url' )->default( '' )->escape( 'esc_url' )->get();
 				$button_text = ACF::field( 'button_text' )->default( '' )->escape( 'esc_attr' )->get();
 
+				if ( is_singular( 'location' ) ) {
+					$ghc_base    = GHC_Base::get_main_instance();
+					$title       = get_field( 'convention_short_name' ) . ' Homeschool Convention';
+					$subtitle    = $ghc_base->format_date_range( get_field( 'begin_date' ), get_field( 'end_date' ), 'Ymd' );
+					$button_url  = '#register';
+					$button_text = 'Don&rsquo;t Miss Out!';
+				}
+
 				if ( ! empty( $title ) ) {
 					echo '<h1 class="title">' . $title . '</h1>'; // WPCS: XSS ok.
 				}
