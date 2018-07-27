@@ -38,12 +38,15 @@
 		font-size: 2em;
 		width: 1em;
 		height: 1em;
+		text-decoration: none;
 
 		@include large {
 			font-size: 4em;
 		}
 
 		&:before { color: $theme-blue; }
+
+		.speaker-tags &:before { color: white; }
 
 		&.prev,
 		&.next {
@@ -170,4 +173,22 @@
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
+	text-align: center;
+
+	.filter {
+		display: block;
+		margin: 1em auto 2em;
+		max-width: 600px;
+	}
+
+	.button {
+		color: $theme-green;
+		border-color: $theme-green;
+		margin: 0 0.333em;
+
+		&:hover, &:focus, &:active, &.active {
+			color: white;
+			background-color: $theme-green;
+		}
+	}
 }
