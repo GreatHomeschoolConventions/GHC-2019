@@ -132,6 +132,30 @@
 	.home & + .container { background-color: $theme-silver; }
 }
 
+.speaker-tags.shortcode {
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	text-align: center;
+
+	.filter {
+		display: block;
+		margin: 1em auto 2em;
+		max-width: 600px;
+	}
+
+	.button {
+		color: $theme-green;
+		border-color: $theme-green;
+		margin: 0 0.333em;
+
+		&:hover, &:focus, &:active, &.active {
+			color: white;
+			background-color: $theme-green;
+		}
+	}
+}
+
 .testimonials.shortcode {
 	background-position: center;
 	background-size: cover;
@@ -165,30 +189,6 @@
 		.author {
 			font-weight: 300;
 			font-style: italic;
-		}
-	}
-}
-
-.speaker-tags.shortcode {
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
-	text-align: center;
-
-	.filter {
-		display: block;
-		margin: 1em auto 2em;
-		max-width: 600px;
-	}
-
-	.button {
-		color: $theme-green;
-		border-color: $theme-green;
-		margin: 0 0.333em;
-
-		&:hover, &:focus, &:active, &.active {
-			color: white;
-			background-color: $theme-green;
 		}
 	}
 }
