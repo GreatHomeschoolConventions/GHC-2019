@@ -2,4 +2,10 @@
 	.thumbnail img {
 		border-radius: 50%;
 	}
+
+	&[data-slick*="centerMode"] {
+		.slick-slide:not(.slick-current) {
+			.speaker-info, .excerpt { display: none; }
+		}
+	}
 }
