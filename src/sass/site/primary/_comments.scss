@@ -1,3 +1,7 @@
+.comments-area {
+	@include center-block;
+}
+
 .comment-content a {
 	word-wrap: break-word;
 }

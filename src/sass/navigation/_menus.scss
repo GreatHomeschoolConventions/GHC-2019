@@ -144,7 +144,8 @@
 .post-navigation {
 
 	.site-main & {
-		margin: 0 0 1.5em;
+		@include center-block;
+		margin-bottom: 1.5em;
 		overflow: hidden;
 	}
 

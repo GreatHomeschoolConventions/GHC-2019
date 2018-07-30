@@ -14,14 +14,11 @@
 	.page-header,
 	article,
 	.pages {
-		max-width: 800px;
-		display: block;
-		margin-right: auto;
-		margin-left: auto;
+		@include center-block;
 	}
-
-	.pages { text-align: center; }
 }
+
+.pages { text-align: center; }
 
 .page-header {
 	text-align: center;

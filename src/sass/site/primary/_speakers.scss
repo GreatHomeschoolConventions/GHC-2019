@@ -11,3 +11,7 @@
 		}
 	}
 }
+
+.single-speaker {
+	article { @include center-block; }
+}
