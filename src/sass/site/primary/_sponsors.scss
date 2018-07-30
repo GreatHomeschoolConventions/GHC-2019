@@ -1,0 +1,43 @@
+.related-sponsors {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	text-align: center;
+
+	.overlay {
+		@include overlay(white);
+		color: $color__text-main;
+	}
+
+	.sponsor-container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-content: center;
+		height: 100%;
+	}
+
+	img {
+		display: block;
+		margin: 0 auto;
+		height: auto;
+
+		@include large() { width: 50%; }
+	}
+
+	/* 2 items */
+	.sponsor:nth-last-child(n+2):nth-last-child(-n+2):first-child,
+	.sponsor:nth-last-child(n+2):nth-last-child(-n+2):first-child ~ .sponsor { width: 50%; }
+
+	/* 3 items */
+	.sponsor:nth-last-child(n+3):nth-last-child(-n+3):first-child,
+	.sponsor:nth-last-child(n+3):nth-last-child(-n+3):first-child ~ .sponsor { width: 33%; }
+
+	/* 4 items */
+	.sponsor:nth-last-child(n+4):nth-last-child(-n+4):first-child,
+	.sponsor:nth-last-child(n+4):nth-last-child(-n+4):first-child ~ .sponsor { width: 25%; }
+
+	/* 5 items */
+	.sponsor:nth-last-child(n+5), .sponsor:nth-last-child(n+5) ~ .sponsor { width: 20%; }
+
+}
