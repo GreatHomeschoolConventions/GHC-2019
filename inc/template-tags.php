@@ -121,7 +121,13 @@ function ghc_post_thumbnail_url() {
 		return '';
 	}
 
-	if ( is_singular() && has_post_thumbnail() ) {
+	if ( is_singular( 'speaker' ) ) {
+		foreach ( get_field( 'archive_descriptions', 'option' ) as $cpt ) {
+			if ( 'speaker' === $cpt['post_type'] ) {
+				return $cpt['header_image'];
+			}
+		}
+	} elseif ( is_singular() && has_post_thumbnail() ) {
 		return get_the_post_thumbnail_url( get_the_ID(), 'header-2019' );
 	} elseif ( is_tax() ) {
 		return get_field( 'featured_image', 'category_' . get_queried_object_id() );
