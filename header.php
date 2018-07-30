@@ -47,17 +47,20 @@ use Samrap\Acf\Acf;
 			<div class="container">
 				<?php
 
+				// Get default title.
 				if ( is_singular() ) {
 					$default_title = get_the_title();
 				} elseif ( is_archive() ) {
 					$default_title = get_the_archive_title();
 				}
 
+				// Get custom title.
 				$title       = ACF::field( 'page_title' )->default( $default_title )->escape( 'wp_kses_post' )->get();
 				$subtitle    = ACF::field( 'page_subtitle' )->default( '' )->escape( 'wp_kses_post' )->get();
 				$button_url  = ACF::field( 'button_url' )->default( '' )->escape( 'esc_url' )->get();
 				$button_text = ACF::field( 'button_text' )->default( '' )->escape( 'esc_attr' )->get();
 
+				// Get locations titles.
 				if ( is_singular( 'location' ) ) {
 					$ghc_base    = GHC_Base::get_main_instance();
 					$title       = get_field( 'convention_short_name' ) . ' Homeschool Convention';
@@ -66,6 +69,7 @@ use Samrap\Acf\Acf;
 					$button_text = 'Don&rsquo;t Miss Out!';
 				}
 
+				// Add custom hard-coded headers.
 				if ( is_tax( 'ghc_special_tracks_taxonomy' ) ) {
 					echo '<h2 class="subtitle">Special Track</h2>';
 				}
