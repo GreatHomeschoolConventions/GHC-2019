@@ -74,6 +74,19 @@
 	}
 }
 
+.ghc-grid.shortcode {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	@include large {
+		.ghc-cpt.item {
+			width: 25%;
+			padding: 1em;
+		}
+	}
+}
+
 .ghc-map {
 	min-height: 400px;
 }
