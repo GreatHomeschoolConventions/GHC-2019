@@ -21,6 +21,8 @@ get_header();
 				?>
 			</header><!-- .page-header -->
 
+			<div class="content">
+
 			<?php
 			/* Start the Loop */
 			while ( have_posts() ) :
@@ -35,7 +37,13 @@ get_header();
 
 			endwhile;
 
-			if ( 'exhibitor' === get_post_type() ) {
+			?>
+
+			</div>
+
+			<?php
+
+			if ( in_array( get_post_type(), array( 'exhibitor', 'hotel' ), true ) ) {
 				echo '<p class="pages">' . paginate_links( array( 'show_all' => true ) ) . '</p>';
 			} else {
 				the_posts_navigation();
