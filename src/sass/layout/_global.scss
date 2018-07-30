@@ -37,3 +37,25 @@
 		&.gray * { color: $theme-gray; }
 	}
 }
+
+.align-left,
+.align-right {
+	margin-bottom: 1em;
+
+	@include small {
+		display: block;
+		margin: 0 auto 1em;
+	}
+}
+
+@include large() {
+	.align-left {
+		float: left;
+		margin-right: 1em;
+	}
+
+	.align-right {
+		float: right;
+		margin-left: 1em;
+	}
+}
