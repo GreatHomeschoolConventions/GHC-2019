@@ -47,7 +47,13 @@ use Samrap\Acf\Acf;
 			<div class="container">
 				<?php
 
-				$title       = ACF::field( 'page_title' )->default( get_the_title() )->escape( 'wp_kses_post' )->get();
+				if ( is_singular() ) {
+					$default_title = get_the_title();
+				} elseif ( is_archive() ) {
+					$default_title = get_the_archive_title();
+				}
+
+				$title       = ACF::field( 'page_title' )->default( $default_title )->escape( 'wp_kses_post' )->get();
 				$subtitle    = ACF::field( 'page_subtitle' )->default( '' )->escape( 'wp_kses_post' )->get();
 				$button_url  = ACF::field( 'button_url' )->default( '' )->escape( 'esc_url' )->get();
 				$button_text = ACF::field( 'button_text' )->default( '' )->escape( 'esc_attr' )->get();
@@ -60,16 +66,20 @@ use Samrap\Acf\Acf;
 					$button_text = 'Don&rsquo;t Miss Out!';
 				}
 
+				if ( is_tax( 'ghc_special_tracks_taxonomy' ) ) {
+					echo '<h2 class="subtitle">Special Track</h2>';
+				}
+
 				if ( ! empty( $title ) ) {
-					echo '<h1 class="title">' . $title . '</h1>'; // WPCS: XSS ok.
+					echo '<h1 class="title">' . $title . '</h1>'; // WPCS: XSS ok because it’s escaped above.
 				}
 
 				if ( ! empty( $subtitle ) ) {
-					echo '<h2 class="subtitle">' . $subtitle . '</h2>'; // WPCS: XSS ok.
+					echo '<h2 class="subtitle">' . $subtitle . '</h2>'; // WPCS: XSS ok because it’s escaped above.
 				}
 
 				if ( ! empty( $button_url ) && ! empty( $button_text ) ) {
-					echo '<p><a class="button" href="' . $button_url . '">' . $button_text . '</a></p>'; // WPCS: XSS ok.
+					echo '<p><a class="button" href="' . $button_url . '">' . $button_text . '</a></p>'; // WPCS: XSS ok because it’s escaped above.
 				}
 
 				?>

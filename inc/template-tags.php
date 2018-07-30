@@ -121,7 +121,9 @@ function ghc_post_thumbnail_url() {
 		return '';
 	}
 
-	if ( has_post_thumbnail() ) {
+	if ( is_singular() && has_post_thumbnail() ) {
 		return get_the_post_thumbnail_url( get_the_ID(), 'header-2019' );
+	} elseif ( is_tax() ) {
+		return get_field( 'featured_image', 'category_' . get_queried_object_id() );
 	}
 }
