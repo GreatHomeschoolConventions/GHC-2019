@@ -14,4 +14,15 @@
 
 .single-speaker {
 	article { @include center-block; }
+
+	.thumbnail img {
+		display: block;
+		margin: 0 auto;
+	}
+
+	.entry-header,
+	.entry-meta,
+	.conventions {
+		text-align: center;
+	}
 }
