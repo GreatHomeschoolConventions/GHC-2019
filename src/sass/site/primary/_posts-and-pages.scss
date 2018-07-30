@@ -10,6 +10,19 @@
 	display: none;
 }
 
+.archive {
+	.page-header,
+	article {
+		max-width: 800px;
+		display: block;
+		margin: auto;
+	}
+}
+
+.page-header {
+	text-align: center;
+}
+
 .page-content,
 .entry-content,
 .entry-summary {

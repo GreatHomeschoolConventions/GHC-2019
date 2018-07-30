@@ -10,6 +10,15 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'container' ); ?>>
+
+	<?php
+	if ( has_post_thumbnail() ) {
+		echo '<div class="thumbnail align-left">';
+		the_post_thumbnail( 'square-thumb' );
+		echo '</div>';
+	}
+	?>
+
 	<header class="entry-header">
 		<?php
 		if ( is_singular() ) :
