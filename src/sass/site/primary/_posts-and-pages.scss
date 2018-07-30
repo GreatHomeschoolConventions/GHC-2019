@@ -20,3 +20,15 @@
 	clear: both;
 	margin: 0 0 1.5em;
 }
+
+.page-numbers {
+	padding: 0.125em;
+
+	&.current {
+		color: $theme-orange;
+		text-decoration: underline;
+	}
+
+	&.prev { margin-right: 0.5em; }
+	&.next { margin-left: 0.5em; }
+}

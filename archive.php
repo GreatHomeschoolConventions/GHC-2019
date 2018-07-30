@@ -36,7 +36,11 @@ get_header();
 
 			endwhile;
 
-			the_posts_navigation();
+			if ( 'exhibitor' === get_post_type() ) {
+				echo '<p class="pages">' . paginate_links( array( 'show_all' => true ) ) . '</p>';
+			} else {
+				the_posts_navigation();
+			}
 
 		else :
 
