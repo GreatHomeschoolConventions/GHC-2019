@@ -72,6 +72,8 @@ use Samrap\Acf\Acf;
 				// Add custom hard-coded headers.
 				if ( is_tax( 'ghc_special_tracks_taxonomy' ) ) {
 					echo '<h2 class="subtitle">Special Track</h2>';
+				} elseif ( is_singular( 'speaker' ) ) {
+					echo '<h2 class="subtitle">Speaker</h2>';
 				}
 
 				if ( ! empty( $title ) ) {
