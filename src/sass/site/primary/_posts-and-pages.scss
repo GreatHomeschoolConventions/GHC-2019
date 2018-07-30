@@ -12,10 +12,12 @@
 
 .archive {
 	.page-header,
-	article {
+	article,
+	.pages {
 		max-width: 800px;
 		display: block;
-		margin: auto;
+		margin-right: auto;
+		margin-left: auto;
 	}
 }
 

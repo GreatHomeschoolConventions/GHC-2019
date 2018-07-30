@@ -161,7 +161,6 @@
 	input.filter:checked + label.button {
 		@extend .button.hollow.active;
 	}
-
 }
 
 .speaker-tags.shortcode {
@@ -202,7 +201,10 @@
 		color: white;
 		text-align: center;
 
-		&:only-of-type { margin-bottom: 0; }
+		&:only-of-type {
+			margin-bottom: 0;
+			@include vertical-padding();
+		}
 
 		> * {
 			display: block;
