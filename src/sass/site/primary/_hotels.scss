@@ -10,4 +10,6 @@
 	.hotel {
 		@include large { width: 25%; }
 	}
+
+	.thumbnail img { border-radius: 50%; }
 }

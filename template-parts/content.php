@@ -13,7 +13,13 @@
 
 	<?php
 	if ( has_post_thumbnail() ) {
-		echo '<div class="thumbnail align-left">';
+		$classes = array( 'thumbnail' );
+
+		if ( 'speaker' === get_post_type() ) {
+			$classes[] = 'align-left';
+		}
+
+		echo '<div class="' . esc_attr( implode( ' ', $classes ) ) . '">';
 		the_post_thumbnail( 'square-thumb' );
 		echo '</div>';
 	}
