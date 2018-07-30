@@ -1,0 +1,13 @@
+.post-type-archive-hotel {
+	article { max-width: initial; }
+
+	.content {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.hotel {
+		@include large { width: 25%; }
+	}
+}
