@@ -43,7 +43,7 @@ get_header();
 
 			<?php
 
-			if ( in_array( get_post_type(), array( 'exhibitor', 'hotel' ), true ) ) {
+			if ( in_array( get_post_type(), array( 'exhibitor', 'hotel', 'speaker', 'special_event' ), true ) ) {
 				echo '<p class="pages">' . paginate_links( array( 'show_all' => true ) ) . '</p>';
 			} else {
 				the_posts_navigation();
