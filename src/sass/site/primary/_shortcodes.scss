@@ -74,6 +74,10 @@
 	}
 }
 
+.container.shortcode {
+	@include center-block;
+}
+
 .ghc-grid.shortcode {
 	display: flex;
 	flex-wrap: wrap;
