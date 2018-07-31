@@ -14,7 +14,13 @@
 	<?php
 	if ( has_post_thumbnail() ) {
 		echo '<div class="thumbnail">';
+		if ( ! is_singular() ) {
+			echo '<a href="' . esc_url( get_permalink() ) . '">';
+		}
 		the_post_thumbnail( 'square-thumb' );
+		if ( ! is_singular() ) {
+			echo '</a>';
+		}
 		echo '</div>';
 	}
 	?>
