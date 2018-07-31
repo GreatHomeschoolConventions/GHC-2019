@@ -131,5 +131,11 @@ function ghc_post_thumbnail_url() {
 		return get_the_post_thumbnail_url( get_the_ID(), 'header-2019' );
 	} elseif ( is_tax() ) {
 		return get_field( 'featured_image', 'category_' . get_queried_object_id() );
+	} elseif ( is_archive() ) {
+		foreach ( get_field( 'archive_descriptions', 'option' ) as $cpt ) {
+			if ( get_post_type() === $cpt['post_type'] ) {
+				return $cpt['header_image'];
+			}
+		}
 	}
 }
