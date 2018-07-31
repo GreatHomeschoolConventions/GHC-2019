@@ -12,7 +12,8 @@
 	}
 }
 
-.single-speaker {
+.single-speaker,
+.archive.post-type-archive-speaker {
 	article { @include center-block; }
 
 	.thumbnail img {
