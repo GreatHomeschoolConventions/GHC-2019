@@ -5,6 +5,10 @@
 		border-radius: 50%;
 	}
 
+	.entry-title {
+		margin-bottom: 0; // Since this is followed by convention icons and they have the same margin above and below.
+	}
+
 	&[data-slick*="centerMode"] {
 		.slick-slide:not(.slick-current) {
 			.speaker-info, .excerpt { display: none; }
