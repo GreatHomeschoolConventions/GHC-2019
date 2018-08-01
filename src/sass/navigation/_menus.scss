@@ -3,7 +3,13 @@
 	width: 100%;
 	font-family: $font__headings;
 
-	.container { padding: 0;}
+	@include small { text-align: center; }
+
+	.container {
+		padding: 1em;
+
+		@include large { padding: 0; }
+	}
 
 	&#top-navigation { width: auto; }
 	&#site-navigation {
@@ -128,15 +134,14 @@
 .menu-toggle,
 .main-navigation.toggled ul {
 	display: block;
+	margin-right: auto;
+	margin-left: auto;
 }
 
 @include large {
-	.menu-toggle {
-		display: none;
-	}
-	.main-navigation ul {
-		display: flex;
-	}
+	.menu-toggle { display: none; }
+
+	.main-navigation ul { display: flex; }
 }
 
 .comment-navigation,

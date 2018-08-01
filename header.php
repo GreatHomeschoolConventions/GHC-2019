@@ -98,7 +98,7 @@ use Samrap\Acf\Acf;
 
 	<nav id="site-navigation" class="main-navigation">
 		<div class="container">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'ghc' ); ?></button>
+			<button class="menu-toggle dashicons-before dashicons-menu" aria-controls="primary-menu" aria-expanded="false" title="Menu"></button>
 			<?php
 			wp_nav_menu( array(
 				'theme_location' => 'primary-menu',
