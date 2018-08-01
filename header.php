@@ -30,7 +30,10 @@ use Samrap\Acf\Acf;
 		<div class="site-branding">
 			<div class="container">
 				<?php the_custom_logo(); ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+				<h1 class="site-title">
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+					<br/><span class="meta">an outreach event of the <a href="https://www.ncll.org/">National Center for Life and Liberty</a></span>
+				</h1>
 
 				<nav id="top-navigation" class="main-navigation">
 					<?php
