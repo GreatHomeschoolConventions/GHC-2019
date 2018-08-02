@@ -58,8 +58,8 @@ use Samrap\Acf\Acf;
 				}
 
 				// Get custom title.
-				$title       = ACF::field( 'page_title' )->default( $default_title )->escape( 'wp_kses_post' )->get();
-				$subtitle    = ACF::field( 'page_subtitle' )->default( '' )->escape( 'wp_kses_post' )->get();
+				$title       = ACF::field( 'page_title' )->default( $default_title )->get();
+				$subtitle    = ACF::field( 'page_subtitle' )->default( '' )->get();
 				$button_url  = ACF::field( 'button_url' )->default( '' )->escape( 'esc_url' )->get();
 				$button_text = ACF::field( 'button_text' )->default( '' )->escape( 'esc_attr' )->get();
 
