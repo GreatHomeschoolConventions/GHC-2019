@@ -152,10 +152,20 @@
 .register.shortcode {
 	text-align: center;
 
+	.products td { text-align: left; }
+
+	td { padding: 1em; }
+
 	// Checked filter state.
 	// In theme because plugin doesn’t have button styles.
 	input.filter:checked + label.filter {
 		@extend .button.hollow.active;
+	}
+
+	// Force SVG size.
+	.thumb img[src*="svg"] {
+		width: 50px;
+		height: auto;
 	}
 }
 
