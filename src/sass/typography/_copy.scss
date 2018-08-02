@@ -41,6 +41,11 @@ mark, ins {
 	text-decoration: none;
 }
 
+del {
+	text-decoration: line-through;
+	color: $theme-warning;
+}
+
 big {
 	font-size: 125%;
 }

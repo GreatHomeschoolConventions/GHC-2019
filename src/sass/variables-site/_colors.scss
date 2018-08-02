@@ -8,12 +8,15 @@ $theme-pink: #d26684;
 $theme-gray: #555555;
 $theme-silver: #eee;
 
+$theme-warning: red;
+$theme-success: green;
+
 $color__background-body: #fff;
 $color__background-screen: #f1f1f1;
 $color__background-hr: $theme-gray;
 $color__background-button: $theme-magenta;
 $color__background-pre: lighten($theme-gray, 50%);
-$color__background-ins: $theme-gray;
+$color__background-ins: transparent;
 $color__background-button-hover: $theme-orange;
 $color__background-button-focus: $theme-orange;
 
