@@ -117,8 +117,13 @@ endif;
  * @return  string Post thumbnail URL.
  */
 function ghc_post_thumbnail_url() {
-	if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
+	if ( post_password_required() || is_attachment() ) {
 		return '';
+	}
+
+	// Generic fallback.
+	if ( ! has_post_thumbnail() ) {
+		return get_field( 'fallback_header_background', 'option' );
 	}
 
 	if ( is_singular( 'speaker' ) ) {
