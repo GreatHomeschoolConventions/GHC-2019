@@ -87,6 +87,12 @@
 		.nav-menu > li > & { color: white; }
 	}
 
+	.dashicons {
+		font-size: 1.666em;
+		width: 1em;
+		height: 1em;
+	}
+
 	.current_page_item > a,
 	.current-menu-item > a,
 	.current_page_ancestor > a,
@@ -124,8 +130,6 @@
 
 	.dashicons {
 		font-size: 2em;
-		width: 1em;
-		height: 1em;
 		margin: 0.15em 0.25em;
 	}
 }
