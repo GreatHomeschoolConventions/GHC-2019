@@ -19,11 +19,13 @@
 			wp_nav_menu( array(
 				'theme_location' => 'bottom-menu-1',
 				'menu_id'        => 'bottom-menu-1',
+				'menu_class'     => 'bottom-menu',
 			) );
 
 			wp_nav_menu( array(
 				'theme_location' => 'bottom-menu-2',
 				'menu_id'        => 'bottom-menu-2',
+				'menu_class'     => 'bottom-menu',
 			) );
 			?>
 		</nav><!-- #site-navigation -->

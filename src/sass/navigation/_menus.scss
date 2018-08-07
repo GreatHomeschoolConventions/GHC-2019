@@ -134,6 +134,16 @@
 	}
 }
 
+#footer-navigation {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 2em;
+
+	@include small() { flex-wrap: wrap; }
+
+	.bottom-menu { display: block; }
+}
+
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
