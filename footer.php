@@ -14,6 +14,20 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer">
+		<nav id="footer-navigation" class="main-navigation">
+			<?php
+			wp_nav_menu( array(
+				'theme_location' => 'bottom-menu-1',
+				'menu_id'        => 'bottom-menu-1',
+			) );
+
+			wp_nav_menu( array(
+				'theme_location' => 'bottom-menu-2',
+				'menu_id'        => 'bottom-menu-2',
+			) );
+			?>
+		</nav><!-- #site-navigation -->
+
 		<div class="site-info">
 			&copy; <?php echo esc_attr( date( 'Y' ) ); ?>
 			<span class="sep"> | </span>

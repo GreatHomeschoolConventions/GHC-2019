@@ -52,8 +52,10 @@ if ( ! function_exists( 'ghc_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in these locations.
 		register_nav_menus( array(
-			'primary-menu' => esc_html__( 'Primary', 'ghc' ),
-			'top-menu'     => esc_html__( 'Top', 'ghc' ),
+			'primary-menu'  => esc_html__( 'Main Menu', 'ghc' ),
+			'top-menu'      => esc_html__( 'Header Menu', 'ghc' ),
+			'bottom-menu-1' => esc_html__( 'Footer Menu 1', 'ghc' ),
+			'bottom-menu-2' => esc_html__( 'Footer Menu 2', 'ghc' ),
 		) );
 
 		/*
