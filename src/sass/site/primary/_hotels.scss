@@ -1,10 +1,8 @@
-.post-type-archive-hotel {
-	article { max-width: initial; }
-
-	.content {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
+.post-type-archive-hotel,
+.shortcode.hotel {
+	article {
+		max-width: initial;
+		padding: 1em;
 	}
 
 	.hotel {
@@ -12,4 +10,11 @@
 	}
 
 	.thumbnail img { border-radius: 50%; }
+}
+
+.post-type-archive-hotel .content,
+.shortcode.hotel {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
