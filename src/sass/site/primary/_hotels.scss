@@ -12,8 +12,6 @@
 	.hotel {
 		@include large { width: 25%; }
 	}
-
-	.thumbnail img { border-radius: 50%; }
 }
 
 .post-type-archive-hotel .content,
