@@ -77,6 +77,12 @@
 			width: 100%;
 
 			@include large { width: 33%; }
+
+			.content {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+			}
 		}
 
 		.header {
