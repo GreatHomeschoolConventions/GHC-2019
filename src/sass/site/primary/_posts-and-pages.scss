@@ -22,6 +22,10 @@
 
 .pages { text-align: center; }
 
+.page-template-default .content-area:not(.full-width) {
+	@include center-block;
+}
+
 .page-header {
 	text-align: center;
 }
