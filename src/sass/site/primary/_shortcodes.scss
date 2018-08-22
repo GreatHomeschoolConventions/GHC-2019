@@ -118,7 +118,8 @@
 		.map-locations-info { display: none; }
 	}
 
-	.map-info {
+	.map-info,
+	.map-info.key-initial .location {
 		background-repeat: no-repeat;
 		background-position: center 1em;
 		background-size: 3em;
@@ -128,6 +129,9 @@
 			background-position: 0.5em 1em;
 			padding: 1em 1em 1em 4em;
 		}
+	}
+
+	.map-info {
 
 		@include small {
 			h1, .meta, address { text-align: center; }
