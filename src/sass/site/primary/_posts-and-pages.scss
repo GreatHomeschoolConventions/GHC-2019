@@ -22,6 +22,8 @@
 
 .pages { text-align: center; }
 
+.single-special_event .hentry.container,
+.single-special_event .sponsor-container,
 .page-template-default .content-area:not(.full-width) {
 	@include center-block;
 }
